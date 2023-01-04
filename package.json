@@ -1,7 +1,7 @@
 {
 	"name": "frontend",
 	"version": "0.1.0",
-	"proxy":"https://mysqlblog-frontend.onrender.com/api/",
+	"proxy":"https://mysqlblog-backend.onrender.com/api/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
