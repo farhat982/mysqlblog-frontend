@@ -34,7 +34,7 @@ const Write = () => {
 		try {
 			state
 				? await axios.put(
-						`https://mysqlblog-backend.onrender.com/api/posts/${state.id}`,
+						`/posts/${state.id}`,
 						{
 							title,
 							desc: value,
