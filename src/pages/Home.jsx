@@ -77,7 +77,7 @@ const Home = () => {
 							>
 								<h1>{post.title}</h1>
 							</Link>
-							<p>{getText(post.desc)}</p>
+							<p style={{ textAlign: 'justify' }}>{getText(post.desc)}</p>
 							<button>Read more</button>
 						</div>
 					</div>
