@@ -7,7 +7,7 @@ const Menu = ({ cat }) => {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					`https://mysqlblog-backend.onrender.com/api/posts/?cat=${cat}`
+					`/posts/?cat=${cat}`
 				);
 				setPosts(response.data);
 			} catch (error) {
