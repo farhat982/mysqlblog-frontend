@@ -16,7 +16,7 @@ export const AuthContextProvider = ({ children }) => {
 		setCurrentUser(response.data);
 	};
 	const logout = async (inputs) => {
-		await axios.post('/auth/logout');
+		await axios.post('https://mysqlblog-backend.onrender.com/api/auth/logout');
 		setCurrentUser(null);
 	};
 	useEffect(() => {
