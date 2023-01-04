@@ -19,7 +19,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const response = await axios.post(
-				'/auth/register',
+				'https://mysqlblog-backend.onrender.com/api/auth/register',
 				inputs
 			);
 			navigate('/login');
