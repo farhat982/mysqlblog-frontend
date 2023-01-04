@@ -21,7 +21,7 @@ const Single = () => {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					`https://mysqlblog-backend.onrender.com/api/posts/${postId}`
+					`/posts/${postId}`
 				);
 				setPost(response.data);
 			} catch (error) {
