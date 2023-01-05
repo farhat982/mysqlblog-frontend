@@ -33,9 +33,7 @@ const Single = () => {
 
 	const handleDelete = async () => {
 		try {
-			await axios.delete(
-				`/posts/${postId}`
-			);
+			await axios.delete(`/posts/${postId}`);
 			navigate('/');
 		} catch (error) {
 			console.log(error);
@@ -50,7 +48,7 @@ const Single = () => {
 		<div className='single'>
 			<div className='content'>
 				<img
-					src={`../uploads/${post?.img}`}
+					src={post.img}
 					alt='article-img'
 				/>
 				<div className='user'>
