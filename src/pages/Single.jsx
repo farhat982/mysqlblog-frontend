@@ -20,9 +20,7 @@ const Single = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axios.get(
-					`https://mysqlblog-backend.onrender.com/api/posts/${postId}`
-				);
+				const response = await axios.get(`/posts/${postId}`);
 				setPost(response.data);
 			} catch (error) {
 				console.log(error);
@@ -33,9 +31,7 @@ const Single = () => {
 
 	const handleDelete = async () => {
 		try {
-			await axios.delete(
-				`https://mysqlblog-backend.onrender.com/api/posts/${postId}`
-			);
+			await axios.delete(`/posts/${postId}`);
 			navigate('/');
 		} catch (error) {
 			console.log(error);

@@ -6,9 +6,7 @@ const Menu = ({ cat }) => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axios.get(
-					`https://mysqlblog-backend.onrender.com/api/posts/?cat=${cat}`
-				);
+				const response = await axios.get(`/posts/?cat=${cat}`);
 				setPosts(response.data);
 			} catch (error) {
 				console.log(error);

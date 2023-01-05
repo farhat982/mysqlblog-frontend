@@ -17,10 +17,7 @@ const Write = () => {
 		try {
 			const formData = new FormData();
 			formData.append('file', file);
-			const response = await axios.post(
-				'https://mysqlblog-backend.onrender.com/api/upload',
-				formData
-			);
+			const response = await axios.post('/upload', formData);
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -33,15 +30,12 @@ const Write = () => {
 
 		try {
 			state
-				? await axios.put(
-						`https://mysqlblog-backend.onrender.com/api/posts/${state.id}`,
-						{
-							title,
-							desc: value,
-							cat,
-							img: file ? imgUrl : '',
-						}
-				  )
+				? await axios.put(`/posts/${state.id}`, {
+						title,
+						desc: value,
+						cat,
+						img: file ? imgUrl : '',
+				  })
 				: await axios.post(`/posts/`, {
 						title,
 						desc: value,
