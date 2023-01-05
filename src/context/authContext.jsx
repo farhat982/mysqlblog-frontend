@@ -11,8 +11,9 @@ export const AuthContextProvider = ({ children }) => {
 	const login = async (inputs) => {
 		const response = await axios.post(
 			'https://mysqlblog-backend.onrender.com/api/auth/login',
-			inputs
-		);
+			inputs,{
+			withCredentials: true,
+			});
 		setCurrentUser(response.data);
 	};
 	const logout = async (inputs) => {
