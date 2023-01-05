@@ -42,7 +42,7 @@ const Write = () => {
 							img: file ? imgUrl : '',
 						}
 				  )
-				: await axios.post(`/posts/`, {
+				: await axios.post(`/posts`, {
 						title,
 						desc: value,
 						cat,
