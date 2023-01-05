@@ -17,7 +17,10 @@ const Write = () => {
 		try {
 			const formData = new FormData();
 			formData.append('file', file);
-			const response = await axios.post('/upload', formData);
+			const response = await axios.post(
+				'https://mysqlblog-backend.onrender.com/api/upload',
+				formData
+			);
 			return response.data;
 		} catch (error) {
 			console.log(error);

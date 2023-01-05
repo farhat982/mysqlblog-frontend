@@ -33,7 +33,9 @@ const Single = () => {
 
 	const handleDelete = async () => {
 		try {
-			await axios.delete(`/posts/${postId}`);
+			await axios.delete(
+				`https://mysqlblog-backend.onrender.com/api/posts/${postId}`
+			);
 			navigate('/');
 		} catch (error) {
 			console.log(error);
