@@ -40,5 +40,5 @@
 			"last 1 safari version"
 		]
 	},
-	"proxy": "https://mysqlblog-backend.onrender.com/"
+	"proxy": "https://mysqlblog-backend.onrender.com/api/"
 }

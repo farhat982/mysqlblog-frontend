@@ -20,7 +20,7 @@ const Single = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axios.get(`/api/posts/${postId}`);
+				const response = await axios.get(`/posts/${postId}`);
 				setPost(response.data);
 			} catch (error) {
 				console.log(error);
