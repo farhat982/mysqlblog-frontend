@@ -18,7 +18,10 @@ const Register = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post('/auth/register', inputs);
+			const response = await axios.post(
+				'https://mysqlblog-backend.onrender.com/api/auth/register',
+				inputs
+			);
 			navigate('/login');
 		} catch (error) {
 			setError(error.response.data);
