@@ -1,4 +1,5 @@
-import Logo from '../img/logo.png';
+import { Link } from 'react-router-dom';
+import { FaBloggerB } from 'react-icons/fa';
 
 const Footer = () => {
 	return (

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo from '../img/logo.png';
+import { FaBloggerB } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
 

@@ -29,7 +29,12 @@ const Menu = ({ cat }) => {
 						alt='article-img'
 					/>
 					<h2>{post.title}</h2>
-					<button>Read more</button>
+					<Link
+						className='link'
+						to={`/post/${post.id}`}
+					>
+						<button>Read more</button>
+					</Link>
 				</div>
 			))}
 		</div>

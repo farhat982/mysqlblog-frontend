@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 	const [posts, setPosts] = useState([]);
@@ -47,7 +48,12 @@ const Home = () => {
 								<h1>{post.title}</h1>
 							</Link>
 							<p style={{ textAlign: 'justify' }}>{getText(post.desc)}</p>
-							<button>Read more</button>
+							<Link
+								className='link'
+								to={`/post/${post.id}`}
+							>
+								<button>Read more</button>
+							</Link>
 						</div>
 					</div>
 				))}

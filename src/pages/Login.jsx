@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
+import { FaBloggerB } from 'react-icons/fa';
 
 const Login = () => {
 	const [inputs, setInputs] = useState({
