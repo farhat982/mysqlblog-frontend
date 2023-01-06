@@ -31,6 +31,9 @@ const Register = () => {
 	return (
 		<div className='auth'>
 			<form>
+				<div className='logo--login'>
+					<FaBloggerB />
+				</div>
 				<h1 style={{ textAlign: 'center' }}>Register</h1>
 				<input
 					name='username'
