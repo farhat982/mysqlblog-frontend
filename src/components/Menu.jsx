@@ -20,7 +20,7 @@ const Menu = ({ cat }) => {
 	}, [cat]);
 	return (
 		<div className='menu'>
-			<h1>Other posts you may like</h1>
+			<h1>Suggetions</h1>
 			{posts.map((post) => (
 				<div
 					key={post.id}

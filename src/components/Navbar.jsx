@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaBloggerB } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
@@ -9,67 +9,67 @@ const Navbar = () => {
 		<div className='navbar'>
 			<div className='container'>
 				<div className='logo'>
-					<Link to='/'>
+					<NavLink to='/'>
 						<FaBloggerB
 							style={{ color: 'rgb(10, 138, 217)', fontSize: '45px' }}
 						/>
-					</Link>
+					</NavLink>
 				</div>
 				<div className='links'>
-					<Link
+					<NavLink
 						className='link'
 						to='/?cat=art'
 					>
 						<h6>ART</h6>
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						className='link'
 						to='/?cat=science'
 					>
 						<h6>SCIENCE</h6>
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						className='link'
 						to='/?cat=technology'
 					>
 						<h6>TECHNOLOGY</h6>
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						className='link'
 						to='/?cat=cinema'
 					>
 						<h6>CINEMA</h6>
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						className='link'
 						to='/?cat=design'
 					>
 						<h6>DESIGN</h6>
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						className='link'
 						to='/?cat=food'
 					>
 						<h6>FOOD</h6>
-					</Link>
+					</NavLink>
 					<span>{currentUser?.username}</span>
 					{currentUser ? (
 						<span onClick={logout}>Logout</span>
 					) : (
-						<Link
+						<NavLink
 							className='link'
 							to='/login'
 						>
 							Login
-						</Link>
+						</NavLink>
 					)}
 					<span className='write'>
-						<Link
+						<NavLink
 							to='/write'
 							className='link'
 						>
 							Write
-						</Link>
+						</NavLink>
 					</span>
 				</div>
 			</div>
