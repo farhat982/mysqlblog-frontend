@@ -13,6 +13,7 @@ import './style.scss';
 
 function App() {
 	const { currentUser } = useContext(AuthContext);
+
 	const Layout = () => {
 		return (
 			<>
